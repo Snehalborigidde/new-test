@@ -1,0 +1,72 @@
+package software;
+
+public class product {
+	private int productId;
+	private String name;
+	private double details;
+	private double price;
+	 product(int productId,String name,double details,double price)
+	   {
+		   this.productId=productId;
+		   this.name=name;
+		   this.details=details;
+		   this.price=price;
+		   
+	   }
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getDetails() {
+		return details;
+	}
+	public void setDetails(double details) {
+		this.details = details;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public String showDetails()
+	{
+		return (productId+","+name+"," +details+"," +price);
+		
+	}
+
+}
+
+
+
+package software;
+
+import java.util.Scanner;
+
+public class productTest {
+
+	public static void main(String[] args) {
+	
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the new product details:");
+		int productId=sc.nextInt();
+		String name =sc.next();
+		double details=sc.nextDouble();
+		double price=sc.nextDouble();
+		
+		product p2=new product(productId,name,details,price);
+		System.out.println(p2.showDetails());
+		
+
+	}
+
+}
+
